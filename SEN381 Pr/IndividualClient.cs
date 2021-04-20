@@ -5,37 +5,28 @@ using System.Text;
 
 namespace SEN381_Pr
 {
-    public class IndividualClient
+    public class IndividualClient : Client
     {
-        private string _name;
-        private string _surname;
-        private bool _type;
-        private string _address;
-        private string _contract;
-        private Service _clientService;
-        private int _callsMade;
-        private string _referenceNumber;
-        private string _company;
-        private string _position;
-        private int test;
 
-        public string Name { get => _name; set => _name = value; }
-        public string Surname { get => _surname; set => _surname = value; }
-        public bool Type { get => _type; set => _type = value; }
-        public string Address { get => _address; set => _address = value; }
-        public string Contract { get => _contract; set => _contract = value; }
-        public Service ClientService { get => _clientService; set => _clientService = value; }
-        public int CallsMade { get => _callsMade; set => _callsMade = value; }
-        public string ReferenceNumber { get => _referenceNumber; set => _referenceNumber = value; }
-        public string Company { get => _company; set => _company = value; }
-        public string Position { get => _position; set => _position = value; }
+        public override string BusinessID { get => BusinessID; set => BusinessID = value; }
+        public override Contract ClientContract { get => ClientContract; set => ClientContract = value; }
+        public override Address ClientAddress { get => ClientAddress; set => ClientAddress = value; }
+        public override string ClientName { get => ClientName; set => ClientName = value; }
+        public override string ClientSurname { get => ClientSurname; set => ClientSurname = value; }
+        public override string ClientNumber { get => ClientNumber; set => ClientNumber = value; }
+        public override string CallsMade { get => CallsMade; set => CallsMade = value; }
+        public override string Position { get => Position; set => Position = value; }
 
-        public BusinessClient BusinessClient
+        public IndividualClient(string businessID, Contract clientContract, Address clientAddress, string clientName, string clientSurname, string clientNumber, string callsMade, string position)
         {
-            get => default;
-            set
-            {
-            }
+            BusinessID = businessID;
+            ClientContract = clientContract;
+            ClientAddress = clientAddress;
+            ClientName = clientName;
+            ClientSurname = clientSurname;
+            ClientNumber = clientNumber;
+            CallsMade = callsMade;
+            Position = position;
         }
     }
 }

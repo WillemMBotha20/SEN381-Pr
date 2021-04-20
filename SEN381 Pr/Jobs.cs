@@ -12,28 +12,14 @@ namespace SEN381_Pr
         private string _progression;
         private DateTime _arramgedData;
         private bool _completed;
-        private Request _jobRequest;       
+        private Request _jobRequest;
+        private Technician _technician;
 
         public abstract string JobName { get ; set ; }
         public abstract string ReferenceNumber { get; set; }
         public abstract string Progression { get; set; }
         public abstract DateTime ArramgedData { get; set; }
         public abstract bool Completed { get; set; }
-
-        public IndividualClient IndividualClient
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public BusinessClient BusinessClient
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public abstract Technician JobTechnician { get; set; }
     }
 }

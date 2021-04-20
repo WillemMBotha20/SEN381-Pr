@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="BusinessClient.cs" />
     <Compile Include="Call.cs" />
     <Compile Include="CallHandler.cs" />
     <Compile Include="Calls.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="DataHandeler.cs" />
     <Compile Include="FileHandler.cs" />
@@ -62,12 +64,14 @@
     <Compile Include="IndividualClient.cs" />
     <Compile Include="Job.cs" />
     <Compile Include="Jobs.cs" />
+    <Compile Include="Package.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportHandler.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Services.cs" />
+    <Compile Include="Technician.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
