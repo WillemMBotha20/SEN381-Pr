@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="DefaultBackColor" Type="System.Drawing.Color" Scope="User">
-      <Value Profile="(Default)">White</Value>
+      <Value Profile="(Default)">LightGray</Value>
     </Setting>
     <Setting Name="DefaultTextColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">ControlText</Value>

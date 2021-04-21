@@ -198,6 +198,21 @@ namespace SEN381_Pr
             lblUser.Text = name;
         }
 
-      
+        private void btnServices_Click(object sender, EventArgs e)
+        {
+            (new ServicesFrm()).Show();
+            this.Hide();
+        }  
+
+        private void btnBusiness_Click_1(object sender, EventArgs e)
+        {
+            (new Business_Form()).Show();
+            this.Hide();
+        }
+
+        private void lblJobsDone_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

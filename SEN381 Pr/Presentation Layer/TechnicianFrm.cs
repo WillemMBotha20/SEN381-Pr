@@ -63,5 +63,10 @@ namespace SEN381_Pr
                 txtSurname.Text = row.Cells["Surname"].Value.ToString();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

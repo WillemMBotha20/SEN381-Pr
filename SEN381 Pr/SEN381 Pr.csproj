@@ -47,7 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddressADOController.cs" />
     <Compile Include="Business Logic Layer\Address.cs" />
+    <Compile Include="BusinessADOController.cs" />
+    <Compile Include="Presentation Layer\Business_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Business_Form.Designer.cs">
+      <DependentUpon>Business_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data Access Layer\ContractADOController.cs" />
     <Compile Include="Data Access Layer\CallsADOController.cs" />
     <Compile Include="Data Access Layer\ClientADOController.cs" />
@@ -159,7 +167,6 @@
     <Compile Include="Business Logic Layer\ReportHandler.cs" />
     <Compile Include="Business Logic Layer\Request.cs" />
     <Compile Include="Business Logic Layer\Service.cs" />
-    <Compile Include="Business Logic Layer\Services.cs" />
     <Compile Include="Business Logic Layer\Technician.cs" />
     <Compile Include="Presentation Layer\TechnicianFrm.cs">
       <SubType>Form</SubType>
@@ -175,7 +182,17 @@
     </Compile>
     <Compile Include="Data Access Layer\RequestADOController.cs" />
     <Compile Include="Data Access Layer\ReportADOController.cs" />
+    <Compile Include="Data Access Layer\ServicesADOController.cs" />
+    <Compile Include="Presentation Layer\ServicesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ServicesFrm.Designer.cs">
+      <DependentUpon>ServicesFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="Presentation Layer\Business_Form.resx">
+      <DependentUpon>Business_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\AudOptionFrm.resx">
       <DependentUpon>AudOptionFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\VisOptionFrm.resx">
       <DependentUpon>VisOptionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ServicesFrm.resx">
+      <DependentUpon>ServicesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Program\ClassDiagram1.cd" />

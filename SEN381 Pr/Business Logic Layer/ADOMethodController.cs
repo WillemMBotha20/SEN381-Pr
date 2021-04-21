@@ -22,6 +22,7 @@ namespace SEN381_Pr
         ClientADOController ClientCon = new ClientADOController();
         ContractADOController ContractCon = new ContractADOController();
         ReportADOController RepCon = new ReportADOController();
+        ServicesADOController ServicesCon = new ServicesADOController();
 
         //Methods For Technicians
 
@@ -52,6 +53,39 @@ namespace SEN381_Pr
             tab.DataSource = TechCon.LoadData();
             tab.DataMember = "Table";
             MessageBox.Show("Deleted Technician");
+        }
+
+        //Methods for Services
+
+        public void LoadServices(DataGridView tab)
+        {            
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+        }
+
+        public void InsertService(DataGridView tab, string id,string name,string desc,string level,int period,string sal,bool equip)
+        {
+            id = level + name.Substring(0, 3).ToUpper() + (ServicesCon.CountServices() + 1).ToString();                      
+            ServicesCon.InsertService(new Service(id.ToString(),name,desc,period,sal,level,equip));
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Inserted Service");
+        }
+
+        public void UpdateService(DataGridView tab, string id, string name, string desc, string level, int period, string sal, bool equip)
+        {            
+            ServicesCon.UpdateService(new Service(id, name, desc, period, sal, level, equip));
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Updated Service");
+        }
+
+        public void DeleteService(DataGridView tab, string id, string name, string desc, string level, int period, string sal, bool equip)
+        {
+            ServicesCon.DeleteService(new Service(id, name, desc, period, sal, level, equip));
+            tab.DataSource = ServicesCon.LoadData();
+            tab.DataMember = "Table";
+            MessageBox.Show("Deleted Service");
         }
 
         //Methods for Jobs

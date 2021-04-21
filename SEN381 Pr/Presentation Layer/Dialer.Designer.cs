@@ -47,7 +47,7 @@ namespace SEN381_Pr.Presentation_Layer
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(102, 9);
+            this.label1.Location = new System.Drawing.Point(103, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 34);
             this.label1.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace SEN381_Pr.Presentation_Layer
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(102, 43);
+            this.label2.Location = new System.Drawing.Point(103, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 34);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace SEN381_Pr.Presentation_Layer
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 77);
+            this.label3.Location = new System.Drawing.Point(103, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 34);
             this.label3.TabIndex = 2;
@@ -80,7 +80,7 @@ namespace SEN381_Pr.Presentation_Layer
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(102, 337);
+            this.label4.Location = new System.Drawing.Point(103, 337);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 34);
             this.label4.TabIndex = 4;
@@ -89,7 +89,7 @@ namespace SEN381_Pr.Presentation_Layer
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SEN381_Pr.Properties.Resources.calldeclinepic;
-            this.pictureBox2.Location = new System.Drawing.Point(108, 374);
+            this.pictureBox2.Location = new System.Drawing.Point(109, 374);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(84, 78);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +100,7 @@ namespace SEN381_Pr.Presentation_Layer
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SEN381_Pr.Properties.Resources.avatar_man_icon_profile_placeholder_260nw_1229859850;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 166);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 166);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(187, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +115,7 @@ namespace SEN381_Pr.Presentation_Layer
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(115, 132);
+            this.label5.Location = new System.Drawing.Point(116, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 18);
             this.label5.TabIndex = 6;

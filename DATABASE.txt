@@ -1,0 +1,128 @@
+CREATE TABLE Technition
+(
+    TechID INT Primary Key,
+    Name VARCHAR(25),
+    Surname VARCHAR(25),
+    Number VARCHAR(12)
+)
+CREATE TABLE Jobs 
+(
+    JobId INT Primary Key,
+    AdressId INT Forign Key,
+    ReferenceNumber INT Forign Key
+    TechId  INT Forign Key
+    ContractId INT Forign Key
+)
+CREATE TABLE Requests
+(
+    ReferenceNumber INT Primary Key,
+    ClientId INT Forign Key,
+    CallId INT Forign Key,
+    JobId INT Forign Key,
+    Approval,
+)
+CREATE TABLE Reprots
+(
+    ReportId INT Primary Key,
+    ReferenceNumber INT Forign Key,
+    JobId INT Forign Key,
+    ClientId INT Forign Key,
+    Date
+) 
+CREATE TABLE Calls
+(
+    CallId INT Primary Key,
+    ClientId INT Forign Key,
+    ContractId INT Forign Key,
+    ReferenceNumber INT Forign Key,
+    Duration VARCHAR(25),
+    Date SHORTDATE
+)
+CREATE TABLE Client
+(
+    ClientId INT Primary Key,
+    BusinessId INT Forign Key,
+    ContractId INT Forign Key,
+    Name VARCHAR(25),
+    Surname VARCHAR(25),
+    Number VARCHAR(15),
+    CallsMade VARCHAR(6),
+    Position VARCHAR(25),
+)
+CREATE TABLE Business
+(
+    BusinessId INT Primary Key,
+    Adress INT Forign Key,
+    Slogan VARCHAR(225),
+    BusinessName VARCHAR(225),
+    AlternativeContact VARCHAR(25),
+    AlternativeNumber VARCHAR(15)
+)
+CREATE TABLE Adress
+(
+    AdressId INT Primary Key,
+    Street VARCHAR(25),
+    PostalCode VARCHAR(4),
+    Suburb VARCHAR(25),
+    Country VARCHAR(25)
+)
+CREATE TABLE Contract
+(
+    ContractId INT Primary Key,
+    PackageId INT Forign Key,
+    ContrcatName VARCHAR(25),
+    ContactTypeVARCHAR(25)
+)
+CREATE TABLE ServicePackage
+(
+    PackageId INT Primary Key,
+    BronzeId INT Forign Key,
+    SilverId INT Forign Key,
+    GoldId INT Forign Key,
+    PlatId INT Forign Key
+)
+CREATE TABLE BronzePackage
+(
+    BronzeId INT Primary Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key
+)
+CREATE TABLE SilverPackage
+(
+    SilverId INT Primary Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key
+)
+CREATE TABLE GoldPackage
+(
+    GoldId INT Primary Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key
+)
+CREATE TABLE PlatinumPackage
+(
+    PlatId INT Primary Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key,
+    ServiceId INT Forign Key
+)
+CREATE TABLE Services
+(
+    ServiceId INT Primary Key,
+    ServiceAgreement VARCHAR(25),
+    ServiceName VARCHAR(25),
+    ServiceDiscription VARCHAR(225),
+    AvgDuration LONGDATE
+    ServiceLevel VARCHAR(25),
+)

@@ -29,8 +29,10 @@ namespace SEN381_Pr
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuFrm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +47,6 @@ namespace SEN381_Pr
             this.btnJobsOpen = new System.Windows.Forms.Button();
             this.btnClientsOpen = new System.Windows.Forms.Button();
             this.btnContractsOpen = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -58,6 +59,16 @@ namespace SEN381_Pr
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btnServices = new System.Windows.Forms.Button();
+            this.btnBusiness = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnTrackJobs = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblJobsDone = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,6 +81,9 @@ namespace SEN381_Pr
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,7 +95,6 @@ namespace SEN381_Pr
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(890, 82);
             this.panel1.TabIndex = 0;
-            
             // 
             // pictureBox1
             // 
@@ -183,9 +196,9 @@ namespace SEN381_Pr
             this.btnLogOut.FlatAppearance.BorderSize = 3;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(41, 533);
+            this.btnLogOut.Location = new System.Drawing.Point(5, 486);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(334, 33);
+            this.btnLogOut.Size = new System.Drawing.Size(138, 33);
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.UseVisualStyleBackColor = false;
@@ -200,9 +213,9 @@ namespace SEN381_Pr
             this.btnOptionsOpen.FlatAppearance.BorderSize = 3;
             this.btnOptionsOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOptionsOpen.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptionsOpen.Location = new System.Drawing.Point(41, 486);
+            this.btnOptionsOpen.Location = new System.Drawing.Point(5, 447);
             this.btnOptionsOpen.Name = "btnOptionsOpen";
-            this.btnOptionsOpen.Size = new System.Drawing.Size(334, 33);
+            this.btnOptionsOpen.Size = new System.Drawing.Size(138, 33);
             this.btnOptionsOpen.TabIndex = 9;
             this.btnOptionsOpen.Text = "Options";
             this.btnOptionsOpen.UseVisualStyleBackColor = false;
@@ -278,11 +291,6 @@ namespace SEN381_Pr
             this.btnContractsOpen.MouseEnter += new System.EventHandler(this.btnContractsOpen_MouseEnter);
             this.btnContractsOpen.MouseLeave += new System.EventHandler(this.btnContractsOpen_MouseLeave);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
@@ -291,7 +299,7 @@ namespace SEN381_Pr
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(227, 579);
+            this.textBox1.Size = new System.Drawing.Size(227, 618);
             this.textBox1.TabIndex = 12;
             // 
             // pictureBox2
@@ -310,9 +318,11 @@ namespace SEN381_Pr
             this.panel3.Controls.Add(this.lblUser);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(1019, 80);
+            this.panel3.Controls.Add(this.btnOptionsOpen);
+            this.panel3.Controls.Add(this.btnLogOut);
+            this.panel3.Location = new System.Drawing.Point(1012, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(141, 498);
+            this.panel3.Size = new System.Drawing.Size(148, 537);
             this.panel3.TabIndex = 14;
             // 
             // lblUser
@@ -413,12 +423,130 @@ namespace SEN381_Pr
             this.pictureBox9.TabIndex = 24;
             this.pictureBox9.TabStop = false;
             // 
+            // btnServices
+            // 
+            this.btnServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnServices.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnServices.FlatAppearance.BorderSize = 3;
+            this.btnServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServices.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServices.Location = new System.Drawing.Point(41, 486);
+            this.btnServices.Name = "btnServices";
+            this.btnServices.Size = new System.Drawing.Size(209, 43);
+            this.btnServices.TabIndex = 25;
+            this.btnServices.Text = "Services";
+            this.btnServices.UseVisualStyleBackColor = false;
+            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            // 
+            // btnBusiness
+            // 
+            this.btnBusiness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBusiness.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnBusiness.FlatAppearance.BorderSize = 3;
+            this.btnBusiness.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBusiness.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusiness.Location = new System.Drawing.Point(41, 543);
+            this.btnBusiness.Name = "btnBusiness";
+            this.btnBusiness.Size = new System.Drawing.Size(209, 43);
+            this.btnBusiness.TabIndex = 26;
+            this.btnBusiness.Text = "Business";
+            this.btnBusiness.UseVisualStyleBackColor = false;
+            this.btnBusiness.Click += new System.EventHandler(this.btnBusiness_Click_1);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(17, 15);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(535, 250);
+            this.chart1.TabIndex = 27;
+            this.chart1.Text = "chart1";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.chart1);
+            this.panel4.Location = new System.Drawing.Point(273, 87);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(569, 281);
+            this.panel4.TabIndex = 28;
+            // 
+            // btnTrackJobs
+            // 
+            this.btnTrackJobs.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrackJobs.Location = new System.Drawing.Point(848, 334);
+            this.btnTrackJobs.Name = "btnTrackJobs";
+            this.btnTrackJobs.Size = new System.Drawing.Size(159, 34);
+            this.btnTrackJobs.TabIndex = 29;
+            this.btnTrackJobs.Text = "Track Jobs";
+            this.btnTrackJobs.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(273, 374);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(502, 225);
+            this.panel5.TabIndex = 30;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.White;
+            this.monthCalendar1.Location = new System.Drawing.Point(780, 374);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 31;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(780, 541);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(227, 58);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Button Place Holder";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.panel6.Controls.Add(this.lblJobsDone);
+            this.panel6.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel6.ForeColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(848, 87);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(159, 245);
+            this.panel6.TabIndex = 33;
+            // 
+            // lblJobsDone
+            // 
+            this.lblJobsDone.AutoSize = true;
+            this.lblJobsDone.Location = new System.Drawing.Point(46, 109);
+            this.lblJobsDone.Name = "lblJobsDone";
+            this.lblJobsDone.Size = new System.Drawing.Size(66, 26);
+            this.lblJobsDone.TabIndex = 0;
+            this.lblJobsDone.Text = "0 Jobs";
+            this.lblJobsDone.Click += new System.EventHandler(this.lblJobsDone_Click);
+            // 
             // MenuFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::SEN381_Pr.Properties.Settings.Default.DefaultBackColor;
-            this.ClientSize = new System.Drawing.Size(1161, 574);
+            this.ClientSize = new System.Drawing.Size(1161, 611);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.btnTrackJobs);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.btnBusiness);
+            this.Controls.Add(this.btnServices);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -427,8 +555,6 @@ namespace SEN381_Pr
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnOptionsOpen);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnTechOpen);
             this.Controls.Add(this.panel1);
@@ -462,6 +588,10 @@ namespace SEN381_Pr
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,7 +612,6 @@ namespace SEN381_Pr
         private System.Windows.Forms.Button btnJobsOpen;
         private System.Windows.Forms.Button btnClientsOpen;
         private System.Windows.Forms.Button btnContractsOpen;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -496,5 +625,15 @@ namespace SEN381_Pr
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button btnServices;
+        private System.Windows.Forms.Button btnBusiness;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnTrackJobs;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lblJobsDone;
     }
 }

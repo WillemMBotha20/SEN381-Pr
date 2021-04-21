@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFrm));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblLoginText = new System.Windows.Forms.Label();
             this.lblLoginUsername = new System.Windows.Forms.Label();
             this.lblLoginPassword = new System.Windows.Forms.Label();
@@ -45,11 +43,6 @@
             this.picboxLogin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogin)).BeginInit();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // lblLoginText
             // 
@@ -218,8 +211,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label lblLoginText;
         private System.Windows.Forms.Label lblLoginUsername;
         private System.Windows.Forms.Label lblLoginPassword;

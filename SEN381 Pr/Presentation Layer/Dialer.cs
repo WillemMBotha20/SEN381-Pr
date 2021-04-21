@@ -36,6 +36,7 @@ namespace SEN381_Pr.Presentation_Layer
             label3.Text = CallHandlerFrm.Number;
             timer1.Interval = 5000;
             timer2.Interval = 1000;
+            tone.Position = 0;
             timer1.Start();
             Player.Play();   
         }
