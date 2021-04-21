@@ -60,8 +60,9 @@ namespace SEN381_Pr
             this.btnClientDel = new System.Windows.Forms.Button();
             this.btnClientEdit = new System.Windows.Forms.Button();
             this.btnClientAdd = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddress = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,7 +75,7 @@ namespace SEN381_Pr
             this.panel1.Controls.Add(this.dgvClients);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 564);
+            this.panel1.Size = new System.Drawing.Size(748, 604);
             this.panel1.TabIndex = 3;
             // 
             // dgvClients
@@ -100,7 +101,7 @@ namespace SEN381_Pr
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvClients.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.Size = new System.Drawing.Size(742, 558);
+            this.dgvClients.Size = new System.Drawing.Size(742, 598);
             this.dgvClients.TabIndex = 1;
             // 
             // panel2
@@ -345,12 +346,13 @@ namespace SEN381_Pr
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnAddress);
             this.panel3.Controls.Add(this.btnClientDel);
             this.panel3.Controls.Add(this.btnClientEdit);
             this.panel3.Controls.Add(this.btnClientAdd);
             this.panel3.Location = new System.Drawing.Point(766, 378);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(381, 157);
+            this.panel3.Size = new System.Drawing.Size(381, 191);
             this.panel3.TabIndex = 5;
             // 
             // btnClientDel
@@ -401,22 +403,12 @@ namespace SEN381_Pr
             this.btnClientAdd.MouseEnter += new System.EventHandler(this.btnClientAdd_MouseEnter);
             this.btnClientAdd.MouseLeave += new System.EventHandler(this.btnClientAdd_MouseLeave);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(973, 542);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnBack
             // 
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(959, 541);
+            this.btnBack.Location = new System.Drawing.Point(972, 575);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(172, 41);
             this.btnBack.TabIndex = 24;
@@ -424,12 +416,36 @@ namespace SEN381_Pr
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(986, 576);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddress
+            // 
+            this.btnAddress.BackColor = System.Drawing.Color.White;
+            this.btnAddress.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnAddress.FlatAppearance.BorderSize = 3;
+            this.btnAddress.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddress.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddress.Location = new System.Drawing.Point(14, 142);
+            this.btnAddress.Name = "btnAddress";
+            this.btnAddress.Size = new System.Drawing.Size(351, 36);
+            this.btnAddress.TabIndex = 3;
+            this.btnAddress.Text = "Add Address";
+            this.btnAddress.UseVisualStyleBackColor = false;
+            // 
             // ClientFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1156, 588);
+            this.ClientSize = new System.Drawing.Size(1156, 628);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel1);
@@ -482,5 +498,6 @@ namespace SEN381_Pr
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnAddress;
     }
 }

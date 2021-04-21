@@ -65,5 +65,6 @@ namespace SEN381_Pr
             (new MenuFrm()).Show();
             this.Hide();
         }
+
     }
 }
